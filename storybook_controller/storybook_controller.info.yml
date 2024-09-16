@@ -1,0 +1,9 @@
+name: 'Storybook Integration Module'
+type: module
+description: 'A custom module to integrate Storybook with Drupal.'
+core_version_requirement: ^9 || ^10
+package: Custom
+dependencies:
+  - drupal:system
+version: 1.0.0
+configure: 'storybook.settings'

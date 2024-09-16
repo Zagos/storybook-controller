@@ -1,0 +1,34 @@
+storybook.admin_storybook:
+  path: '/admin/storybook-controller'
+  defaults:
+    _controller: '\Drupal\storybook_controller\Controller\StorybookController::adminPage'
+    _title: 'Storybook Controller'
+  requirements:
+    _permission: 'administer site configuration'
+
+storybook.settings:
+  path: '/admin/storybook-controller-settings'
+  defaults:
+    _form: '\Drupal\storybook_controller\Form\StorybookControllerSettingsForm'
+    _title: 'Storybook Controller Settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+storybook.components_list:
+  path: '/storybook/components'
+  defaults:
+    _controller: '\Drupal\storybook_controller\Controller\StorybookController::listComponents'
+    _title: 'Storybook Components'
+  requirements:
+    _permission: 'access content'    
+
+storybook.component:
+  path: '/storybook/components/{id}'
+  defaults:
+    _controller: '\Drupal\storybook_controller\Controller\StorybookController::renderComponent'
+    _title: 'Storybook Component'
+  requirements:
+    _permission: 'access content'
+
+
+

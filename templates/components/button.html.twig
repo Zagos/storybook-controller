@@ -1,0 +1,8 @@
+<button
+    type="button"
+    class="{{ size }} {{ primary|default(false) ? 'primary' : 'secondary' }}"
+    style="{{ style|default('')|escape('html_attr') }}"
+>
+    {{- label -}}
+</button>
+

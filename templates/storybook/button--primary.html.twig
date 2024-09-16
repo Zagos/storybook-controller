@@ -1,0 +1,6 @@
+{{ include('@monadas/components/button.html.twig', {
+    label: args.label|default('Button'),
+    size: args.size|default('medium'),
+    primary: args.primary|default(false) == 'false',
+    style: args.backgroundColor is defined ? "background-color: #{args.backgroundColor}" : '',
+}) }}

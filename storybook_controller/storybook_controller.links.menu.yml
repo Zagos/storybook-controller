@@ -1,0 +1,17 @@
+storybook.admin:
+  title: 'Storybook Controller'
+  description: 'Configure the settings for the Storybook Controller module.'
+  route_name: 'storybook.admin_storybook'
+  parent: 'system.admin'
+  weight: 100
+  options:
+    attributes:
+      class:
+        - toolbar-icon-help-main
+
+storybook.settings:
+  title: 'Storybook Controller Settings'
+  description: 'Configure Storybook Controller settings.'
+  parent: storybook.admin  # Hacer que el settings sea un submenú del admin
+  route_name: storybook.settings
+  weight: 110

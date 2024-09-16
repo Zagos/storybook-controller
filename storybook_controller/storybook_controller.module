@@ -1,0 +1,7 @@
+<?php
+use Drupal\Core\Routing\RouteMatchInterface;
+
+function storybook_controller_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'storybook_controller/toolbar';
+}
+

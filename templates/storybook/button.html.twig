@@ -1,0 +1,17 @@
+<head>
+    <meta charset="UTF-8">
+    {% if css_url %}
+        <link rel="stylesheet" href="{{ css_url }}">
+    {% endif %}
+    {% if js_url %}
+        <script src="{{ js_url }}"></script>
+    {% endif %}
+</head>
+<div style="align-items: center; display: flex; justify-content: center; height: 100%;">
+{{ include('@monadas/components/button.html.twig', {
+    label: args.label|default('Button'),
+    size: args.size|default('medium'),
+    primary: args.primary|default(false) == 'true',
+    style: args.backgroundColor is defined ? "background-color: #{args.backgroundColor}" : '',
+}) }}
+</div>
